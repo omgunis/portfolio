@@ -1,4 +1,4 @@
-import * types from './actionTypes';
+import * as types from './actionTypes';
 import projectApi from '../api/projectsApi';
 import { ajaxCallError, beginAjaxCall } from './ajaxStatusActions';
 

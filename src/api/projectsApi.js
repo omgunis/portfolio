@@ -24,7 +24,7 @@ const projects = [
     title: "Halfway Hang",
     type: "App, Website",
     linkToSite: "http://halfwayhang.herokuapp.com/map",
-    description: "Halfway Hang is app for users to find a middleplace to meet. Whether it be a coffee shop, restaurant, or bar, this app will help you find a meeting place with your friends!".
+    description: "Halfway Hang is app for users to find a middleplace to meet. Whether it be a coffee shop, restaurant, or bar, this app will help you find a meeting place with your friends!",
     objectives: "User authentication, routing, design",
     tech: "NodeJs, Express, Ajax, Mongo/Mongoose, HTML, CSS, Twitter Bootstrap, Facebook Authentication API, Google Maps API, Yelp API, Passport Authentication"
   }
@@ -36,7 +36,7 @@ class ProjectApi {
   static getAllProjects(){
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(Object.assign([], courses));
+        resolve(Object.assign([], projects));
       }, delay);
     });
   }

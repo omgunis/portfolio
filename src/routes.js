@@ -4,7 +4,7 @@ import App from './components/App';
 import HomePage from './components/home/HomePage';
 import SkillsPage from './components/skills/SkillsPage';
 import ProjectsPage from './components/project/ProjectsPage';
-import ManageProjectPage from './components/project/ManageProjectPage';
+import ManageProjectPage from './components/project/ManageProjectPage'; //eslint-disable-line import/no-named-as-default
 import AboutPage from './components/about/AboutPage';
 import ContactPage from './components/contact/ContactPage';
 
