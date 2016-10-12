@@ -1,3 +1,5 @@
+import delay from './delay';
+
 const projects = [
   {
     id: "plastic-walrus",
@@ -27,3 +29,17 @@ const projects = [
     tech: "NodeJs, Express, Ajax, Mongo/Mongoose, HTML, CSS, Twitter Bootstrap, Facebook Authentication API, Google Maps API, Yelp API, Passport Authentication"
   }
 ];
+
+// Use setTimeout to simulate the delay of an AJAX call
+// All calls return promises
+class ProjectApi {
+  static getAllProjects(){
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(Object.assign([], courses));
+      }, delay);
+    });
+  }
+}
+
+export default ProjectApi;
