@@ -12,7 +12,7 @@ const ProjectListRow = ({ project }) => {
       <div>Tech: { project.tech }</div>
       <div>Link to Site: <a href={ project.linkToSite } target="_blank">{ project.title }</a></div>
       <div><Link to={ '/project/' + project.id }>View Project</Link></div>
-      <ProjectModal />
+      <ProjectModal project={ project }/>
     </div>
   );
 };
