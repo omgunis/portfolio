@@ -1,15 +1,16 @@
 import React from 'react';
 
-const ProjectForm = ({ project }) => {
-  return (
+const ProjectView = ({ project }) => {
+ return (
     <form>
       <h1>{ project.title }</h1>
+      
     </form>
   );
 };
 
-ProjectForm.propTypes = {
+ProjectView.propTypes = {
   project: React.PropTypes.object.isRequired
 }
 
-export default ProjectForm;
+export default ProjectView;
