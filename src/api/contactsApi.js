@@ -17,17 +17,23 @@ const contacts = [
   }
 ];
 
+const generateId = (contact) => {
+  return contacts.length + 1;
+}
+
 class ContactApi {
   static saveContact(contact){
     contact = Object.assign({}, contact);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const minContactNameLength = 1;
-        if(contact.name.length < minContactNameLength){
+        if(contact.name.length === 0){
           reject(`Please enter your name`);
         }
+        if(contact.email.length === 0){
+          reject(`Please enter a valid email address`);
+        }
         else {
-          contact.id = contacts.length + 1;
+          contact.id = generateId(contact);
           contacts.push(contact);
         }
 

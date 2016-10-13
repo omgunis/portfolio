@@ -1,10 +1,10 @@
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { browserHistory } from 'react-router';
 import * as contactActions from '../../actions/contactActions';
 import ContactForm from './ContactForm';
 import toastr from 'toastr';
-import { browserHistory } from 'react-router';
 
 class ContactPage extends React.Component {
   constructor(props, context){
@@ -19,6 +19,7 @@ class ContactPage extends React.Component {
     this.updateContactState = this.updateContactState.bind(this);
     this.saveContact = this.saveContact.bind(this);
   }
+
   updateContactState(event){
     const field = event.target.name;
     let contact = this.state.contact;
@@ -30,7 +31,7 @@ class ContactPage extends React.Component {
     let formIsValid = true;
     let errors = {};
 
-    if(this.state.contact.name.length < 1){
+    if(this.state.contact.name.length === 0){
       errors.name = 'Please enter a name';
       formIsValid = false;
     }
@@ -48,23 +49,27 @@ class ContactPage extends React.Component {
 
     this.setState({sending: true});
     this.props.actions.saveContact(this.state.contact)
-      .then(() => this.redirect())
+      .then(() => this.formSuccess())
       .catch(error => {
         toastr.error(error);
         this.setState({sending: false});
       });
   }
 
-  redirect(){
+  formSuccess(){
+    this.state.contact.name = '';
+    this.state.contact.email = '';
+    this.state.contact.subject = '';
+    this.state.contact.message = '';
     this.setState({sending: false});
     toastr.success('Message sent!');
-    this.context.router.push('/contact');
+    // this.context.router.push('/contact');
   }
 
   render(){
     return(
       <div>
-        <h1>Hit me up!</h1>
+        <h1>Contact</h1>
         <ContactForm
           onChange={ this.updateContactState }
           onSend={ this.saveContact }

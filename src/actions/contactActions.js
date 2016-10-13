@@ -1,5 +1,5 @@
 import * as types from './actionTypes';
-import contactApi from '../api/contactsApi';
+import contactsApi from '../api/contactsApi';
 import { ajaxCallError, beginAjaxCall } from './ajaxStatusActions';
 
 export function createContactSuccess(contact){
@@ -9,7 +9,7 @@ export function createContactSuccess(contact){
 export function saveContact(contact){
   return function(dispatch, getState){
     dispatch(beginAjaxCall());
-    return contactApi.saveContact(contact).then(contact => {
+    return contactsApi.saveContact(contact).then(contact => {
       dispatch(createContactSuccess(contact));
     }).catch(error => {
       dispatch(ajaxCallError(error));

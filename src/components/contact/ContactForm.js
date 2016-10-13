@@ -1,5 +1,7 @@
 import React from 'react';
 import TextInput from '../common/TextInput';
+import TextArea from '../common/TextArea';
+
 
 const ContactForm = ({ contact, onSend, onChange, sending, errors }) => {
   return (
@@ -17,7 +19,7 @@ const ContactForm = ({ contact, onSend, onChange, sending, errors }) => {
           label="Email"
           value={ contact.email }
           onChange={ onChange }
-          error={ errors.title }
+          error={ errors.email }
         />
 
         <TextInput
@@ -25,21 +27,21 @@ const ContactForm = ({ contact, onSend, onChange, sending, errors }) => {
           label="Subject"
           value={ contact.subject }
           onChange={ onChange }
-          error={ errors.title }
+          error={ errors.subject }
         />
 
-        <TextInput
+        <TextArea
           name="message"
           label="Message"
           value={ contact.message }
           onChange={ onChange }
-          error={ errors.title }
+          error={ errors.message }
         />
 
         <input
           type="submit"
           disabled={ sending }
-          value={ sending ? "Sending..." : "Sent"}
+          value={ sending ? "Sending..." : "Send"}
           className="btn btn-primary"
           onClick={ onSend }
         />
