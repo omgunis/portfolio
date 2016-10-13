@@ -1,17 +1,18 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router';
-import $ from 'jquery';
+import ProjectModal from './ProjectModal';
 
 const ProjectListRow = ({ project }) => {
 
   return (
     <div className="col-xs-12 col-md-4">
-      <a href={ project.linkToSite } target="_blank">Link To Site</a><br/>
-      <div>{ project.title } <Link to={ '/project/' + project.id }>View</Link></div>
-      <div>{ project.type }</div>
-      <div>{ project.description }</div>
-      <div>{ project.objectives }</div>
-      <div>{ project.tech }</div>
+      <div>Type: { project.type }</div>
+      <div>Description: { project.description }</div>
+      <div>Objectives: { project.objectives }</div>
+      <div>Tech: { project.tech }</div>
+      <div>Link to Site: <a href={ project.linkToSite } target="_blank">{ project.title }</a></div>
+      <div><Link to={ '/project/' + project.id }>View Project</Link></div>
+      <ProjectModal />
     </div>
   );
 };
