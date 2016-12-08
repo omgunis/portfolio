@@ -7,17 +7,23 @@
   margin: 0 auto;
 }
 
+body {
+  color: #4d4d4d;
+}
+
 a.active {
   color: orange;
 }
 
 nav {
-  padding-top: 20px;
-  padding-right: 30px;
+  transition: all 0.2s ease-out;
+  color: #4d4d4d;
+  padding: 40px 50px;
   text-align: right;
 }
 
 .nav-item {
+  color: #4d4d4d;
   margin-left: 20px;
 }
 
@@ -28,4 +34,10 @@ nav {
   top: 0;
   z-index: 100;
   border-top: 0;
+}
+
+.scrolling {
+  color: #f9f9f9;
+  padding: 20px 50px;
+  background-color: rgba(10, 10, 10, 0.5);
 }
