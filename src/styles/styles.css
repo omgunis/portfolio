@@ -1,5 +1,6 @@
 #app {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font: 14px 'Source Sans Pro', sans-serif;
   color: #4d4d4d;
   min-width: 550px;
   max-width: 850px;
@@ -12,4 +13,19 @@ a.active {
 
 nav {
   padding-top: 20px;
+  padding-right: 30px;
+  text-align: right;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
 }
