@@ -2,8 +2,6 @@
   /*font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
   font: 14px 'Source Sans Pro', sans-serif;
   color: #4d4d4d;
-  min-width: 550px;
-  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -18,7 +16,8 @@ nav {
 }
 
 h1 {
-  padding-top: .7em;
+  padding-top: .8em;
+  padding-bottom: .8em;
 }
 
 .nav-item {
@@ -40,4 +39,10 @@ h1 {
   color: #f9f9f9;
   padding: 1em 9em;
   background-color: rgba(10, 10, 10, 0.5);
+}
+
+.project {
+  padding: 5em 0;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
 }

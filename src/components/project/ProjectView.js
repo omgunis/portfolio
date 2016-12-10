@@ -1,5 +1,7 @@
 import React from 'react';
 
+{/* View for single project, /project/:id, imported into ManageProjectPage */}
+
 const ProjectView = ({ project }) => {
  return (
     <form>

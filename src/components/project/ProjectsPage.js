@@ -5,6 +5,7 @@ import * as projectActions from '../../actions/projectActions';
 import ProjectList from './ProjectList';
 import { browserHistory } from 'react-router';
 
+{/* Main view for all projects page. /projects */}
 class ProjectsPage extends React.Component {
   constructor(props, context){
     super(props, context);
@@ -25,7 +26,7 @@ class ProjectsPage extends React.Component {
     return(
       <div>
         <h1>Projects</h1>
-        <ProjectList projects={ projects } />
+        <ProjectList  projects={ projects } />
       </div>
     );
   }

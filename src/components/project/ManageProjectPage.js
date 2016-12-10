@@ -5,6 +5,8 @@ import * as projectActions from '../../actions/projectActions';
 import ProjectView from './ProjectView';
 import toastr from 'toastr';
 
+{/* Handles data from store, imported into Routes */}
+
 export class ManageProjectPage extends React.Component {
   constructor(props, context) {
     super(props, context);
