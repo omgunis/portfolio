@@ -19,7 +19,7 @@ const contacts = [
 
 const generateId = (contact) => {
   return contacts.length + 1;
-}
+};
 
 class ContactApi {
   static saveContact(contact){

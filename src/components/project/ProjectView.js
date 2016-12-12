@@ -12,6 +12,6 @@ const ProjectView = ({ project }) => {
 
 ProjectView.propTypes = {
   project: React.PropTypes.object.isRequired
-}
+};
 
 export default ProjectView;
